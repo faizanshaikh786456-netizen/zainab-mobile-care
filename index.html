@@ -1,515 +1,1696 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <meta name="theme-color" content="#080808">
-<meta name="description" content="Zainab Mobile Care — Luxury doorstep mobile repair service in Alibag.">
-<title>Zainab Mobile Care | Premium Repair Studio</title>
+<meta name="description" content="Zainab Mobile Care — Premium doorstep iPhone & Android mobile repair service in Alibag. Book your repair appointment on WhatsApp.">
+
+<title>Zainab Mobile Care | The Repair Studio</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --gold:#d6b36a;
-  --gold2:#f3dda0;
-  --bg:#080808;
-  --panel:#111;
-  --text:#f7f3ea;
-  --muted:#aaa397;
-  --line:rgba(214,179,106,.25);
+  --gold:#d8b35a;
+  --gold2:#f4d47b;
+  --black:#070707;
+  --card:#111111;
+  --text:#f7f3e8;
+  --muted:#aaa59a;
+  --line:rgba(216,179,90,.20);
+  --green:#25d366;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:85px}
-body{background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;line-height:1.65}
-a{color:inherit;text-decoration:none}
-button,input,select,textarea{font:inherit}
-button,a{ -webkit-tap-highlight-color:transparent}
-.container{width:min(1150px,90%);margin:auto}
-.gold{color:var(--gold)}
-.eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:700}
-section{padding:85px 0}
-.heading{max-width:680px;margin-bottom:35px}
-.heading h2{font:clamp(32px,5vw,49px)/1.15 "Playfair Display",serif;margin:12px 0}
-.heading p{color:var(--muted)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 21px;border:1px solid var(--gold);background:var(--gold);color:#111;font-weight:700;font-size:13px;cursor:pointer;transition:.2s}
-.btn:hover{background:var(--gold2);transform:translateY(-2px)}
-.btn.outline{background:transparent;color:var(--gold)}
-.btn.outline:hover{background:var(--gold);color:#111}
 
-/* Header */
-header{position:sticky;top:0;z-index:20;background:#090909f5;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.navbar{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-.brand{display:flex;align-items:center;gap:11px}
-.brand-mark{width:43px;height:43px;border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold);font:27px "Playfair Display",serif}
-.brand-name{font:17px "Playfair Display",serif;line-height:1.2}
-.brand-name small{display:block;font:9px "DM Sans",sans-serif;color:var(--gold);letter-spacing:2px;margin-top:5px}
-.navlinks{display:flex;align-items:center;gap:22px;font-size:12px;color:#d4cec2}
-.navlinks a:hover{color:var(--gold)}
-.menu-toggle{display:none;background:transparent;color:var(--gold);border:1px solid var(--line);padding:9px 12px}
-.lang-switch{background:#17140e;color:var(--gold);border:1px solid var(--gold);padding:9px 12px;cursor:pointer;font-size:12px}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-/* Hero */
-.hero{min-height:610px;display:flex;align-items:center;overflow:hidden;background:radial-gradient(ellipse at 75% 45%,#b18b3a25,transparent 42%),linear-gradient(110deg,#080808 45%,#17130b);border-bottom:1px solid var(--line)}
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px;padding:75px 0}
-.hero h1{font:clamp(43px,6vw,75px)/1.06 "Playfair Display",serif;margin:20px 0}
-.hero h1 span{color:var(--gold);font-style:italic}
-.hero p{max-width:510px;color:var(--muted);margin-bottom:27px}
-.actions{display:flex;flex-wrap:wrap;gap:12px}
-.hero-note{color:#8d867a;font-size:12px;margin-top:25px}
-.hero-art{min-height:390px;display:grid;place-items:center;position:relative}
-.halo{width:min(340px,90%);aspect-ratio:1;border:1px solid #d6b36a45;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,#d6b36a22,transparent 68%)}
-.phone{width:160px;height:315px;border:5px solid #85734b;border-radius:30px;padding:9px;background:#191919;transform:rotate(-8deg);box-shadow:0 25px 80px #000;animation:float 5s ease-in-out infinite}
-.phone-screen{height:100%;border:1px solid #9b804b;border-radius:21px;background:radial-gradient(circle at 50% 35%,#8c6a2a,transparent 40%),linear-gradient(150deg,#292317,#050505);display:flex;align-items:center;justify-content:center;flex-direction:column}
-.phone-screen b{font:55px "Playfair Display",serif;color:var(--gold2)}
-.phone-screen small{font-size:8px;letter-spacing:2px;color:var(--gold)}
-.phone-top{width:43px;height:12px;background:#050505;border-radius:20px;margin-bottom:18px}
-.art-label{position:absolute;right:0;bottom:20px;background:#15120c;border:1px solid var(--line);padding:13px 16px;color:var(--gold);font-size:11px;letter-spacing:1px}
-@keyframes float{50%{transform:translateY(-13px) rotate(-4deg)}}
+html{
+  scroll-behavior:smooth;
+}
 
-/* Trust */
-.trust{background:#0d0c0a;border-bottom:1px solid var(--line)}
-.trust-grid{display:grid;grid-template-columns:repeat(3,1fr)}
-.trust-item{text-align:center;padding:22px 10px;border-right:1px solid var(--line)}
-.trust-item:last-child{border:0}
-.trust-item b{display:block;color:var(--gold);font-size:13px}
-.trust-item span{font-size:11px;color:var(--muted)}
+body{
+  background:
+    radial-gradient(circle at 80% 10%,rgba(216,179,90,.10),transparent 30%),
+    radial-gradient(circle at 10% 60%,rgba(216,179,90,.06),transparent 25%),
+    var(--black);
+  color:var(--text);
+  font-family:"DM Sans",sans-serif;
+  overflow-x:hidden;
+}
 
-/* Services */
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
-.card{background:linear-gradient(145deg,#17150f,#0d0d0c);border:1px solid var(--line);padding:25px;transition:.2s}
-.card:hover{border-color:var(--gold);transform:translateY(-4px)}
-.card-icon{font-size:25px;color:var(--gold);margin-bottom:15px}
-.card h3{font:23px "Playfair Display",serif;margin-bottom:9px}
-.card p{font-size:13px;color:var(--muted);margin-bottom:17px}
-.text-link{color:var(--gold);font-size:12px;font-weight:700;letter-spacing:.8px}
+a{
+  color:inherit;
+  text-decoration:none;
+}
 
-/* Before after gallery */
-.gallery{background:#0e0d0a;border-block:1px solid var(--line)}
-.gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.gallery-card{border:1px solid var(--line);background:#111;padding:14px}
-.gallery-images{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.photo-placeholder{min-height:190px;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:15px;background:linear-gradient(145deg,#29251b,#090909);border:1px dashed #8e7544;color:var(--gold)}
-.photo-placeholder strong{font:22px "Playfair Display",serif}
-.photo-placeholder span{font-size:11px;color:var(--muted);margin-top:7px}
-.gallery-card h3{font:21px "Playfair Display",serif;margin:14px 0 5px}
-.gallery-card p{font-size:12px;color:var(--muted)}
-.gallery-tip{font-size:12px;color:var(--muted);margin-top:20px}
+button,input,select,textarea{
+  font:inherit;
+}
 
-/* Price */
-.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:start}
-.price-info h2{font:clamp(34px,5vw,48px)/1.15 "Playfair Display",serif;margin:13px 0}
-.price-info p{color:var(--muted);margin-bottom:22px}
-.price-form{background:var(--panel);border:1px solid var(--line);padding:27px}
-.price-form h3{font:25px "Playfair Display",serif;margin-bottom:7px}
-.price-form>p{font-size:12px;color:var(--muted);margin-bottom:20px}
-.field{display:flex;flex-direction:column;gap:7px;margin-bottom:15px}
-.field label{font-size:12px;color:#d4ccbd}
-.field input,.field select,.field textarea{width:100%;background:#080808;color:var(--text);border:1px solid #393328;padding:13px;outline:none;border-radius:0}
-.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}
-.field textarea{min-height:90px;resize:vertical}
-.price-form .btn{width:100%;margin-top:5px}
+.container{
+  width:min(1150px,92%);
+  margin:auto;
+}
 
-/* Service area */
-.area{background:linear-gradient(120deg,#12100b,#080808);border-block:1px solid var(--line)}
-.area-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
-.area-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:22px 0}
-.area-pill{border:1px solid var(--line);padding:12px;color:#ddd4c3;font-size:13px}
-.area-pill::before{content:"✦ ";color:var(--gold)}
-.area-note{font-size:12px;color:var(--muted)}
-.map-card{min-height:290px;border:1px solid var(--line);background:radial-gradient(circle at center,#d6b36a1c,transparent 60%),#10100e;display:grid;place-items:center;text-align:center;padding:25px}
-.map-card .pin{font-size:44px;color:var(--gold)}
-.map-card h3{font:27px "Playfair Display",serif;margin:8px}
-.map-card p{font-size:13px;color:var(--muted);margin-bottom:15px}
+/* ---------- TOP BAR ---------- */
 
-/* Reviews */
-.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
-.review{border:1px solid var(--line);background:#111;padding:24px}
-.stars{color:var(--gold);letter-spacing:3px}
-.review blockquote{font-size:14px;color:#ded8cc;margin:13px 0}
-.review b{font-size:12px;color:var(--gold)}
-.review small{display:block;color:var(--muted);font-size:11px}
-.review-warning{font-size:12px;color:var(--muted);margin-top:20px}
+.topbar{
+  background:#050505;
+  border-bottom:1px solid var(--line);
+  text-align:center;
+  padding:8px;
+  font-size:12px;
+  color:var(--gold2);
+  letter-spacing:.7px;
+}
 
-/* FAQ */
-.faq{background:#0e0d0a;border-block:1px solid var(--line)}
-.faq-list{display:grid;gap:10px;max-width:850px}
-details{border:1px solid var(--line);background:#111;padding:17px 20px}
-summary{cursor:pointer;color:var(--gold);font-weight:600;font-size:14px}
-details p{color:var(--muted);font-size:13px;padding-top:12px}
+/* ---------- NAV ---------- */
 
-/* Footer */
-footer{padding:35px 0;background:#060606;border-top:1px solid var(--line)}
-.footer-row{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.footer-copy{font-size:11px;color:#827b70;margin-top:12px}
-.footer-links{display:flex;gap:17px;font-size:12px;color:var(--gold)}
-.float-wa{position:fixed;right:17px;bottom:17px;z-index:30;background:var(--gold);color:#111;padding:13px 18px;font-weight:700;font-size:13px;box-shadow:0 8px 25px #0008}
-.float-wa span{font-size:18px;margin-right:7px}
+nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  backdrop-filter:blur(18px);
+  background:rgba(7,7,7,.88);
+  border-bottom:1px solid var(--line);
+}
+
+.nav-inner{
+  height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo-mark{
+  width:42px;
+  height:42px;
+  border:1px solid var(--gold);
+  border-radius:12px;
+  display:grid;
+  place-items:center;
+  color:var(--gold2);
+  font-family:"Playfair Display";
+  font-size:24px;
+  box-shadow:0 0 20px rgba(216,179,90,.12);
+}
+
+.logo-text strong{
+  display:block;
+  font-family:"Playfair Display";
+  letter-spacing:1.4px;
+  font-size:15px;
+}
+
+.logo-text span{
+  color:var(--muted);
+  font-size:9px;
+  letter-spacing:2.5px;
+}
+
+.nav-links{
+  display:flex;
+  gap:24px;
+  font-size:13px;
+  color:#ccc;
+}
+
+.nav-links a:hover{
+  color:var(--gold2);
+}
+
+.nav-btn{
+  border:1px solid var(--gold);
+  padding:11px 17px;
+  border-radius:30px;
+  color:var(--gold2);
+  font-size:12px;
+  transition:.3s;
+}
+
+.nav-btn:hover{
+  background:var(--gold);
+  color:#080808;
+}
+
+/* ---------- HERO ---------- */
+
+.hero{
+  min-height:720px;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero:before{
+  content:"";
+  position:absolute;
+  width:500px;
+  height:500px;
+  right:-180px;
+  top:70px;
+  border-radius:50%;
+  border:1px solid rgba(216,179,90,.12);
+  box-shadow:
+    0 0 0 70px rgba(216,179,90,.025),
+    0 0 0 140px rgba(216,179,90,.015);
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:60px;
+  align-items:center;
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  border:1px solid var(--line);
+  padding:8px 13px;
+  border-radius:30px;
+  color:var(--gold2);
+  background:rgba(216,179,90,.04);
+  font-size:11px;
+  letter-spacing:1px;
+  margin-bottom:22px;
+}
+
+.badge i{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#54d66a;
+  box-shadow:0 0 12px #54d66a;
+}
+
+h1{
+  font-family:"Playfair Display",serif;
+  font-size:clamp(46px,7vw,82px);
+  line-height:.98;
+  font-weight:600;
+  max-width:800px;
+}
+
+.gold{
+  color:var(--gold2);
+}
+
+.hero p{
+  margin:25px 0;
+  color:var(--muted);
+  max-width:600px;
+  line-height:1.8;
+  font-size:16px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  border:1px solid var(--gold);
+  border-radius:12px;
+  padding:14px 20px;
+  cursor:pointer;
+  transition:.3s;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+}
+
+.btn-gold{
+  background:linear-gradient(135deg,var(--gold2),var(--gold));
+  color:#080808;
+  font-weight:700;
+}
+
+.btn-gold:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 30px rgba(216,179,90,.20);
+}
+
+.btn-dark{
+  background:transparent;
+  color:var(--gold2);
+}
+
+.btn-dark:hover{
+  background:rgba(216,179,90,.08);
+}
+
+/* PHONE CARD */
+
+.phone-showcase{
+  position:relative;
+  min-height:500px;
+  display:grid;
+  place-items:center;
+}
+
+.phone{
+  width:240px;
+  height:470px;
+  border:5px solid #292929;
+  border-radius:38px;
+  background:
+    linear-gradient(145deg,#191919,#050505);
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.8),
+    0 0 50px rgba(216,179,90,.10);
+  position:relative;
+  transform:rotate(7deg);
+}
+
+.phone:before{
+  content:"";
+  position:absolute;
+  top:10px;
+  left:50%;
+  transform:translateX(-50%);
+  width:85px;
+  height:23px;
+  border-radius:20px;
+  background:#000;
+}
+
+.phone-screen{
+  position:absolute;
+  inset:8px;
+  border-radius:32px;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 70% 25%,rgba(216,179,90,.5),transparent 20%),
+    radial-gradient(circle at 20% 80%,rgba(150,100,20,.2),transparent 30%),
+    linear-gradient(145deg,#201b10,#050505);
+}
+
+.screen-text{
+  position:absolute;
+  left:20px;
+  bottom:30px;
+  font-family:"Playfair Display";
+  font-size:25px;
+  color:var(--gold2);
+}
+
+.floating-card{
+  position:absolute;
+  background:rgba(18,18,18,.85);
+  border:1px solid var(--line);
+  backdrop-filter:blur(15px);
+  padding:14px 17px;
+  border-radius:15px;
+  box-shadow:0 15px 40px #000;
+  font-size:12px;
+}
+
+.floating-card strong{
+  display:block;
+  color:var(--gold2);
+  margin-bottom:4px;
+}
+
+.fc1{
+  left:5%;
+  top:22%;
+}
+
+.fc2{
+  right:0;
+  bottom:22%;
+}
+
+/* ---------- SECTIONS ---------- */
+
+section{
+  padding:90px 0;
+}
+
+.section-head{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.eyebrow{
+  color:var(--gold2);
+  font-size:11px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+.section-head h2{
+  font-family:"Playfair Display";
+  font-size:42px;
+}
+
+.section-head p{
+  color:var(--muted);
+  margin-top:12px;
+}
+
+/* ---------- TRUST ---------- */
+
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+
+.trust-card{
+  background:linear-gradient(145deg,#121212,#0a0a0a);
+  border:1px solid var(--line);
+  padding:24px;
+  border-radius:18px;
+}
+
+.icon{
+  font-size:25px;
+  margin-bottom:15px;
+}
+
+.trust-card h3{
+  font-size:15px;
+  margin-bottom:7px;
+}
+
+.trust-card p{
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.6;
+}
+
+/* ---------- SERVICES ---------- */
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+
+.service{
+  padding:28px;
+  border:1px solid var(--line);
+  background:linear-gradient(145deg,#121212,#090909);
+  border-radius:20px;
+  transition:.3s;
+}
+
+.service:hover{
+  transform:translateY(-5px);
+  border-color:rgba(244,212,123,.6);
+}
+
+.service-number{
+  color:var(--gold);
+  font-size:12px;
+}
+
+.service h3{
+  margin:18px 0 10px;
+  font-family:"Playfair Display";
+  font-size:22px;
+}
+
+.service p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.7;
+}
+
+/* ---------- BOOKING ---------- */
+
+.booking-wrap{
+  display:grid;
+  grid-template-columns:.75fr 1.25fr;
+  gap:20px;
+  align-items:stretch;
+}
+
+.booking-info,
+.booking-form{
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:linear-gradient(145deg,#121212,#090909);
+}
+
+.booking-info{
+  padding:35px;
+}
+
+.booking-info h2{
+  font-family:"Playfair Display";
+  font-size:35px;
+  margin-bottom:15px;
+}
+
+.booking-info p{
+  color:var(--muted);
+  line-height:1.7;
+  font-size:14px;
+}
+
+.steps{
+  margin-top:30px;
+}
+
+.step{
+  display:flex;
+  gap:14px;
+  margin:20px 0;
+}
+
+.step-num{
+  min-width:34px;
+  height:34px;
+  border:1px solid var(--gold);
+  color:var(--gold2);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  font-size:12px;
+}
+
+.step strong{
+  font-size:13px;
+}
+
+.step p{
+  font-size:11px;
+  margin-top:3px;
+}
+
+.booking-form{
+  padding:35px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+.field{
+  margin-bottom:15px;
+}
+
+.field.full{
+  grid-column:1/-1;
+}
+
+label{
+  display:block;
+  color:#c8c3b8;
+  font-size:11px;
+  margin-bottom:7px;
+}
+
+input,
+select,
+textarea{
+  width:100%;
+  border:1px solid rgba(255,255,255,.10);
+  background:#080808;
+  color:white;
+  border-radius:10px;
+  padding:13px;
+  outline:none;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+  border-color:var(--gold);
+}
+
+textarea{
+  min-height:100px;
+  resize:vertical;
+}
+
+.photo-box{
+  border:1px dashed rgba(216,179,90,.35);
+  padding:15px;
+  border-radius:12px;
+}
+
+.photo-preview{
+  display:none;
+  margin-top:10px;
+  width:90px;
+  height:90px;
+  object-fit:cover;
+  border-radius:10px;
+  border:1px solid var(--gold);
+}
+
+.form-note{
+  color:#777;
+  font-size:10px;
+  margin-top:10px;
+  line-height:1.5;
+}
+
+/* ---------- PRICE ---------- */
+
+.price-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+
+.price-card{
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:24px;
+  background:#101010;
+  text-align:center;
+}
+
+.price-card span{
+  color:var(--muted);
+  font-size:12px;
+}
+
+.price-card strong{
+  display:block;
+  font-family:"Playfair Display";
+  color:var(--gold2);
+  font-size:25px;
+  margin:8px 0;
+}
+
+/* ---------- GALLERY ---------- */
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+.gallery-item{
+  min-height:210px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  overflow:hidden;
+  background:
+    linear-gradient(135deg,#1c180f,#080808);
+  position:relative;
+}
+
+.gallery-item div{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  padding:18px;
+  background:linear-gradient(transparent,rgba(0,0,0,.9));
+}
+
+.gallery-item strong{
+  font-size:13px;
+}
+
+.gallery-item span{
+  display:block;
+  color:var(--gold);
+  font-size:10px;
+  margin-top:4px;
+}
+
+/* ---------- REVIEWS ---------- */
+
+.reviews{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+
+.review{
+  border:1px solid var(--line);
+  background:#101010;
+  border-radius:18px;
+  padding:25px;
+}
+
+.stars{
+  color:var(--gold2);
+  letter-spacing:2px;
+  margin-bottom:15px;
+}
+
+.review p{
+  color:#c2beb5;
+  line-height:1.7;
+  font-size:13px;
+}
+
+.review strong{
+  display:block;
+  margin-top:18px;
+  font-size:12px;
+}
+
+/* ---------- WARRANTY ---------- */
+
+.warranty{
+  border:1px solid var(--line);
+  border-radius:25px;
+  padding:45px;
+  background:
+    radial-gradient(circle at 90% 20%,rgba(216,179,90,.12),transparent 30%),
+    #101010;
+  text-align:center;
+}
+
+.warranty h2{
+  font-family:"Playfair Display";
+  font-size:40px;
+}
+
+.warranty p{
+  max-width:650px;
+  margin:15px auto 25px;
+  color:var(--muted);
+  line-height:1.7;
+}
+
+/* ---------- FAQ ---------- */
+
+.faq{
+  max-width:800px;
+  margin:auto;
+}
+
+details{
+  border-bottom:1px solid var(--line);
+  padding:18px 0;
+}
+
+summary{
+  cursor:pointer;
+  font-size:14px;
+  color:#eee;
+}
+
+details p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.7;
+  padding-top:12px;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+  border-top:1px solid var(--line);
+  padding:50px 0 25px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr;
+  gap:30px;
+}
+
+footer h3{
+  font-family:"Playfair Display";
+  color:var(--gold2);
+  margin-bottom:13px;
+}
+
+footer p,
+footer a{
+  color:var(--muted);
+  font-size:12px;
+  line-height:2;
+}
+
+.copyright{
+  border-top:1px solid rgba(255,255,255,.06);
+  margin-top:30px;
+  padding-top:20px;
+  text-align:center;
+  color:#666;
+  font-size:10px;
+}
+
+/* ---------- FLOATING WHATSAPP ---------- */
+
+.whatsapp{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:2000;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:var(--green);
+  color:white;
+  display:grid;
+  place-items:center;
+  font-size:27px;
+  box-shadow:0 10px 30px rgba(37,211,102,.25);
+  animation:pulse 2.2s infinite;
+}
+
+@keyframes pulse{
+  0%,100%{box-shadow:0 10px 30px rgba(37,211,102,.25)}
+  50%{box-shadow:0 10px 40px rgba(37,211,102,.55)}
+}
+
+/* ---------- TOAST ---------- */
+
+.toast{
+  position:fixed;
+  left:50%;
+  bottom:25px;
+  transform:translate(-50%,100px);
+  background:#171717;
+  border:1px solid var(--gold);
+  color:white;
+  padding:14px 20px;
+  border-radius:12px;
+  z-index:3000;
+  transition:.4s;
+  font-size:12px;
+}
+
+.toast.show{
+  transform:translate(-50%,0);
+}
+
+/* ---------- MOBILE ---------- */
 
 @media(max-width:850px){
- .navlinks{gap:12px}
- .navlinks a{font-size:11px}
- .cards{grid-template-columns:repeat(2,1fr)}
- .reviews-grid{grid-template-columns:1fr 1fr}
+
+  .nav-links{
+    display:none;
+  }
+
+  .hero{
+    min-height:auto;
+    padding:80px 0;
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .hero p{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .hero-buttons{
+    justify-content:center;
+  }
+
+  .phone-showcase{
+    min-height:430px;
+  }
+
+  .trust-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .services-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .booking-wrap{
+    grid-template-columns:1fr;
+  }
+
+  .price-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .gallery{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .reviews{
+    grid-template-columns:1fr;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
 }
-@media(max-width:650px){
- section{padding:62px 0}
- .navbar{min-height:70px}
- .brand-name{font-size:14px}
- .menu-toggle{display:block}
- .navlinks{display:none;position:absolute;top:70px;left:0;right:0;background:#0b0b0a;padding:15px 5%;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}
- .navlinks.open{display:flex}
- .navlinks a{padding:12px 0;border-bottom:1px solid #29251d;font-size:13px}
- .navlinks .lang-switch{margin-top:12px}
- .hero-grid{grid-template-columns:1fr;padding:60px 0 40px;gap:12px}
- .hero h1{font-size:clamp(43px,12vw,60px)}
- .hero-art{min-height:330px}
- .phone{width:140px;height:275px}
- .halo{width:275px}
- .trust-item{padding:17px 5px}
- .trust-item b{font-size:10px}
- .trust-item span{font-size:9px}
- .cards,.gallery-grid,.price-grid,.area-grid,.reviews-grid{grid-template-columns:1fr}
- .gallery-images{gap:7px}
- .photo-placeholder{min-height:150px}
- .area-list{grid-template-columns:1fr 1fr}
- .price-form{padding:20px 16px}
- .footer-row{align-items:flex-start;flex-direction:column}
- .float-wa{right:11px;bottom:11px;padding:12px 14px}
+
+@media(max-width:520px){
+
+  section{
+    padding:65px 0;
+  }
+
+  h1{
+    font-size:48px;
+  }
+
+  .section-head h2{
+    font-size:34px;
+  }
+
+  .trust-grid,
+  .services-grid,
+  .gallery,
+  .price-grid{
+    grid-template-columns:1fr;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .field.full{
+    grid-column:auto;
+  }
+
+  .booking-info,
+  .booking-form{
+    padding:24px;
+  }
+
+  .phone{
+    width:205px;
+    height:400px;
+  }
+
+  .floating-card{
+    transform:scale(.9);
+  }
 }
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
 </style>
 </head>
 
 <body>
 
-<header>
- <div class="container navbar">
-  <a class="brand" href="#home">
-   <div class="brand-mark">Z</div>
-   <div class="brand-name">ZAINAB MOBILE CARE<small>THE REPAIR STUDIO</small></div>
-  </a>
-  <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navlinks">☰ MENU</button>
-  <nav class="navlinks" id="navlinks">
-   <a href="#home" data-en="Home" data-hi="होम">Home</a>
-   <a href="#services" data-en="Services" data-hi="सेवाएँ">Services</a>
-   <a href="#gallery" data-en="Gallery" data-hi="गैलरी">Gallery</a>
-   <a href="#pricing" data-en="Price Enquiry" data-hi="कीमत पूछें">Price Enquiry</a>
-   <a href="#area" data-en="Service Area" data-hi="सेवा क्षेत्र">Service Area</a>
-   <a href="#reviews" data-en="Reviews" data-hi="रिव्यू">Reviews</a>
-   <a href="#faq" data-en="FAQ" data-hi="सवाल-जवाब">FAQ</a>
-   <a href="#pricing" class="text-link" data-en="BOOK ↗" data-hi="बुक करें ↗">BOOK ↗</a>
-   <button class="lang-switch" id="langSwitch" type="button">हिन्दी</button>
-  </nav>
- </div>
-</header>
-
-<main>
-<section class="hero" id="home">
- <div class="container hero-grid">
-  <div>
-   <div class="eyebrow" data-en="Premium Doorstep Mobile Repair" data-hi="प्रीमियम डोरस्टेप मोबाइल रिपेयर">Premium Doorstep Mobile Repair</div>
-   <h1 data-en="Your Device.<br>Our <span>Expertise.</span>" data-hi="आपका फोन।<br>हमारी <span>महारत।</span>">Your Device.<br>Our <span>Expertise.</span></h1>
-   <p data-en="Professional iPhone and Android repair enquiries, with convenient doorstep service by appointment in Alibag." data-hi="Alibag में अपॉइंटमेंट के अनुसार iPhone और Android रिपेयर की जानकारी और सुविधाजनक डोरस्टेप सेवा।">Professional iPhone and Android repair enquiries, with convenient doorstep service by appointment in Alibag.</p>
-   <div class="actions">
-    <a class="btn" href="#pricing" data-en="BOOK A REPAIR ↗" data-hi="रिपेयर बुक करें ↗">BOOK A REPAIR ↗</a>
-    <a class="btn outline" href="#services" data-en="OUR SERVICES" data-hi="हमारी सेवाएँ">OUR SERVICES</a>
-   </div>
-   <div class="hero-note" data-en="✦ Doorstep service · By appointment · Alibag" data-hi="✦ डोरस्टेप सेवा · अपॉइंटमेंट से · Alibag">✦ Doorstep service · By appointment · Alibag</div>
-  </div>
-  <div class="hero-art">
-   <div class="halo"><div class="phone"><div class="phone-screen"><div class="phone-top"></div><b>Z</b><small>MOBILE CARE</small></div></div></div>
-   <div class="art-label">PRECISION · CARE · QUALITY</div>
-  </div>
- </div>
-</section>
-
-<div class="trust">
- <div class="container trust-grid">
-  <div class="trust-item"><b>iPHONE & ANDROID</b><span data-en="Multiple brands supported" data-hi="कई ब्रांड के फोन">Multiple brands supported</span></div>
-  <div class="trust-item"><b data-en="DOORSTEP SERVICE" data-hi="डोरस्टेप सेवा">DOORSTEP SERVICE</b><span data-en="Convenience at your location" data-hi="आपकी जगह पर सुविधा">Convenience at your location</span></div>
-  <div class="trust-item"><b data-en="BY APPOINTMENT" data-hi="अपॉइंटमेंट से">BY APPOINTMENT</b><span data-en="Confirm your visit with us" data-hi="आने से पहले पुष्टि करें">Confirm your visit with us</span></div>
- </div>
+<div class="topbar">
+  ✦ PREMIUM DOORSTEP MOBILE REPAIR • ALIBAG • BY APPOINTMENT
 </div>
 
+<nav>
+  <div class="container nav-inner">
+
+    <a href="#" class="logo">
+      <div class="logo-mark">Z</div>
+      <div class="logo-text">
+        <strong>ZAINAB MOBILE CARE</strong>
+        <span>THE REPAIR STUDIO</span>
+      </div>
+    </a>
+
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#booking">Book Repair</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+    </div>
+
+    <a class="nav-btn" href="#booking">BOOK NOW ↗</a>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+
+<header class="hero">
+  <div class="container hero-grid">
+
+    <div>
+
+      <div class="badge">
+        <i></i>
+        DOORSTEP SERVICE AVAILABLE
+      </div>
+
+      <h1>
+        Your Device.<br>
+        <span class="gold">Our Expertise.</span>
+      </h1>
+
+      <p>
+        Premium iPhone & Android repair service at your doorstep in Alibag.
+        Professional service, transparent communication and convenient
+        appointment booking.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="btn btn-gold" href="#booking">
+          BOOK A REPAIR ↗
+        </a>
+
+        <a class="btn btn-dark"
+           href="https://wa.me/917028561281?text=Hello%20Zainab%20Mobile%20Care%2C%20I%20want%20to%20enquire%20about%20a%20mobile%20repair.">
+          WHATSAPP US
+        </a>
+      </div>
+
+    </div>
+
+    <div class="phone-showcase">
+
+      <div class="floating-card fc1">
+        <strong>DOORSTEP</strong>
+        Repair at your convenience
+      </div>
+
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="screen-text">
+            ZAINAB<br>
+            MOBILE CARE
+          </div>
+        </div>
+      </div>
+
+      <div class="floating-card fc2">
+        <strong>iPHONE + ANDROID</strong>
+        Professional Repair
+      </div>
+
+    </div>
+
+  </div>
+</header>
+
+
+<!-- TRUST -->
+
+<section>
+  <div class="container">
+
+    <div class="trust-grid">
+
+      <div class="trust-card">
+        <div class="icon">🏠</div>
+        <h3>Doorstep Service</h3>
+        <p>Repair service at your selected location in Alibag.</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="icon">📅</div>
+        <h3>By Appointment</h3>
+        <p>Choose your preferred date and time before service.</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="icon">🔧</div>
+        <h3>Professional Repair</h3>
+        <p>Focused on reliable iPhone and Android repair solutions.</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="icon">🛡️</div>
+        <h3>Repair Warranty</h3>
+        <p>Warranty details are clearly discussed before repair.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SERVICES -->
+
 <section id="services">
- <div class="container">
-  <div class="heading">
-   <div class="eyebrow" data-en="Our Services" data-hi="हमारी सेवाएँ">Our Services</div>
-   <h2 data-en="Care for every <span class='gold'>detail.</span>" data-hi="हर छोटी बात का <span class='gold'>ख़याल।</span>">Care for every <span class="gold">detail.</span></h2>
-   <p data-en="Select a service to start your repair enquiry." data-hi="रिपेयर की जानकारी के लिए अपनी सेवा चुनें।">Select a service to start your repair enquiry.</p>
-  </div>
-  <div class="cards">
-   <article class="card"><div class="card-icon">▣</div><h3 data-en="Display Replacement" data-hi="डिस्प्ले रिप्लेसमेंट">Display Replacement</h3><p data-en="Enquire about screen replacement for supported models." data-hi="सपोर्टेड मॉडल के स्क्रीन रिप्लेसमेंट की जानकारी लें।">Enquire about screen replacement for supported models.</p><a class="text-link service-link" href="#pricing" data-service="Display Replacement">ENQUIRE ↗</a></article>
-   <article class="card"><div class="card-icon">◉</div><h3 data-en="Battery Replacement" data-hi="बैटरी रिप्लेसमेंट">Battery Replacement</h3><p data-en="Ask about battery replacement options for your phone." data-hi="अपने फोन की बैटरी बदलने के विकल्प पूछें।">Ask about battery replacement options for your phone.</p><a class="text-link service-link" href="#pricing" data-service="Battery Replacement">ENQUIRE ↗</a></article>
-   <article class="card"><div class="card-icon">⌁</div><h3 data-en="Charging Issues" data-hi="चार्जिंग की समस्या">Charging Issues</h3><p data-en="Charging port and charging-related fault enquiries." data-hi="चार्जिंग पोर्ट और चार्जिंग संबंधी समस्या की जानकारी।">Charging port and charging-related fault enquiries.</p><a class="text-link service-link" href="#pricing" data-service="Charging Issue">ENQUIRE ↗</a></article>
-   <article class="card"><div class="card-icon">◈</div><h3 data-en="Camera Repair" data-hi="कैमरा रिपेयर">Camera Repair</h3><p data-en="Ask about camera faults and supported repairs." data-hi="कैमरा खराबी और रिपेयर के बारे में पूछें।">Ask about camera faults and supported repairs.</p><a class="text-link service-link" href="#pricing" data-service="Camera Issue">ENQUIRE ↗</a></article>
-   <article class="card"><div class="card-icon">⌘</div><h3 data-en="Speaker & Microphone" data-hi="स्पीकर और माइक्रोफोन">Speaker & Microphone</h3><p data-en="Enquire about sound and microphone problems." data-hi="आवाज़ और माइक्रोफोन की समस्या के बारे में पूछें।">Enquire about sound and microphone problems.</p><a class="text-link service-link" href="#pricing" data-service="Speaker / Mic Issue">ENQUIRE ↗</a></article>
-   <article class="card"><div class="card-icon">✧</div><h3 data-en="Other Repairs" data-hi="अन्य रिपेयर">Other Repairs</h3><p data-en="Tell us about another issue with your device." data-hi="अपने फोन की दूसरी समस्या हमें बताएं।">Tell us about another issue with your device.</p><a class="text-link service-link" href="#pricing" data-service="Other Repair">ENQUIRE ↗</a></article>
-  </div>
- </div>
-</section>
 
-<section class="gallery" id="gallery">
- <div class="container">
-  <div class="heading">
-   <div class="eyebrow" data-en="Repair Gallery" data-hi="रिपेयर गैलरी">Repair Gallery</div>
-   <h2 data-en="Before & <span class='gold'>After.</span>" data-hi="रिपेयर से <span class='gold'>पहले और बाद।</span>">Before & <span class="gold">After.</span></h2>
-   <p data-en="Replace these sample panels with your own genuine repair photos." data-hi="इन सैंपल जगहों पर अपनी असली रिपेयर की तस्वीरें लगाएं।">Replace these sample panels with your own genuine repair photos.</p>
-  </div>
-  <div class="gallery-grid">
-   <article class="gallery-card">
-    <div class="gallery-images">
-     <div class="photo-placeholder"><strong>BEFORE</strong><span>Replace with real damaged-screen photo</span></div>
-     <div class="photo-placeholder"><strong>AFTER</strong><span>Replace with real repaired-screen photo</span></div>
+  <div class="container">
+
+    <div class="section-head">
+      <div class="eyebrow">Our Expertise</div>
+      <h2>Premium Repair Services</h2>
+      <p>From everyday repairs to detailed troubleshooting.</p>
     </div>
-    <h3 data-en="Display Replacement" data-hi="डिस्प्ले रिप्लेसमेंट">Display Replacement</h3>
-    <p data-en="Example gallery layout — add your own completed repair photos." data-hi="गैलरी का उदाहरण — अपनी पूरी की गई रिपेयर की तस्वीरें लगाएं।">Example gallery layout — add your own completed repair photos.</p>
-   </article>
-   <article class="gallery-card">
-    <div class="gallery-images">
-     <div class="photo-placeholder"><strong>BEFORE</strong><span>Replace with real phone photo</span></div>
-     <div class="photo-placeholder"><strong>AFTER</strong><span>Replace with real repaired phone photo</span></div>
+
+    <div class="services-grid">
+
+      <div class="service">
+        <span class="service-number">01</span>
+        <h3>Display Replacement</h3>
+        <p>Broken, cracked, black or damaged display replacement for supported devices.</p>
+      </div>
+
+      <div class="service">
+        <span class="service-number">02</span>
+        <h3>Battery Replacement</h3>
+        <p>Battery replacement for devices with poor backup, swelling or shutdown issues.</p>
+      </div>
+
+      <div class="service">
+        <span class="service-number">03</span>
+        <h3>Charging Repair</h3>
+        <p>Charging port, slow charging, no charging and related issues.</p>
+      </div>
+
+      <div class="service">
+        <span class="service-number">04</span>
+        <h3>Camera Repair</h3>
+        <p>Camera glass, camera module and camera-related troubleshooting.</p>
+      </div>
+
+      <div class="service">
+        <span class="service-number">05</span>
+        <h3>Speaker & Mic</h3>
+        <p>Low sound, distorted speaker, microphone and call-audio issues.</p>
+      </div>
+
+      <div class="service">
+        <span class="service-number">06</span>
+        <h3>Software Issues</h3>
+        <p>Software troubleshooting, updates and selected software-related solutions.</p>
+      </div>
+
     </div>
-    <h3 data-en="Battery / Other Repair" data-hi="बैटरी / अन्य रिपेयर">Battery / Other Repair</h3>
-    <p data-en="Use authentic images only, with customer permission." data-hi="केवल असली तस्वीरें ग्राहक की अनुमति से इस्तेमाल करें।">Use authentic images only, with customer permission.</p>
-   </article>
+
   </div>
-  <p class="gallery-tip" data-en="Tip: To add a photo, upload it to your GitHub repository and replace a placeholder panel with an image tag." data-hi="टिप: फोटो GitHub repository में अपलोड करें और placeholder को image tag से बदलें।">Tip: To add a photo, upload it to your GitHub repository and replace a placeholder panel with an image tag.</p>
- </div>
+
 </section>
 
-<section id="pricing">
- <div class="container price-grid">
-  <div class="price-info">
-   <div class="eyebrow" data-en="Repair Price Enquiry" data-hi="रिपेयर की कीमत पूछें">Repair Price Enquiry</div>
-   <h2 data-en="Know your options.<br><span class='gold'>Ask for a quote.</span>" data-hi="अपने विकल्प जानें।<br><span class='gold'>कीमत पूछें।</span>">Know your options.<br><span class="gold">Ask for a quote.</span></h2>
-   <p data-en="Repair pricing can depend on the phone model, fault and part availability. Send your details on WhatsApp to request a quote." data-hi="रिपेयर की कीमत फोन मॉडल, खराबी और पार्ट की उपलब्धता पर निर्भर हो सकती है। कीमत पूछने के लिए WhatsApp पर जानकारी भेजें।">Repair pricing can depend on the phone model, fault and part availability. Send your details on WhatsApp to request a quote.</p>
-   <a class="btn outline" href="#services" data-en="VIEW SERVICES" data-hi="सेवाएँ देखें">VIEW SERVICES</a>
+
+<!-- BOOKING -->
+
+<section id="booking">
+
+  <div class="container">
+
+    <div class="booking-wrap">
+
+      <div class="booking-info">
+
+        <div class="eyebrow">Appointment</div>
+
+        <h2>Book Your Repair</h2>
+
+        <p>
+          Tell us about your device and preferred appointment.
+          Your booking details will be prepared for WhatsApp confirmation.
+        </p>
+
+        <div class="steps">
+
+          <div class="step">
+            <div class="step-num">01</div>
+            <div>
+              <strong>Submit Details</strong>
+              <p>Enter your device and repair issue.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">02</div>
+            <div>
+              <strong>WhatsApp Confirmation</strong>
+              <p>We'll receive your booking details.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">03</div>
+            <div>
+              <strong>Doorstep Visit</strong>
+              <p>Appointment is confirmed before visit.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="booking-form">
+
+        <form id="bookingForm">
+
+          <div class="form-grid">
+
+            <div class="field">
+              <label>Your Name *</label>
+              <input id="name" type="text" placeholder="Enter your name" required>
+            </div>
+
+            <div class="field">
+              <label>Mobile Number *</label>
+              <input id="mobile" type="tel" placeholder="10 digit mobile number" required>
+            </div>
+
+            <div class="field">
+              <label>Phone Brand *</label>
+              <select id="brand" required>
+                <option value="">Select brand</option>
+                <option>Apple iPhone</option>
+                <option>Samsung</option>
+                <option>OnePlus</option>
+                <option>Xiaomi / Redmi</option>
+                <option>POCO</option>
+                <option>Vivo</option>
+                <option>Oppo</option>
+                <option>Realme</option>
+                <option>Motorola</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Phone Model *</label>
+              <input id="model" type="text" placeholder="Example: iPhone 14" required>
+            </div>
+
+            <div class="field">
+              <label>Repair Service *</label>
+              <select id="service" required>
+                <option value="">Select service</option>
+                <option>Display Replacement</option>
+                <option>Battery Replacement</option>
+                <option>Charging Repair</option>
+                <option>Camera Repair</option>
+                <option>Speaker / Microphone</option>
+                <option>Software Issue</option>
+                <option>Other / Diagnosis</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Preferred Date *</label>
+              <input id="date" type="date" required>
+            </div>
+
+            <div class="field">
+              <label>Preferred Time *</label>
+              <select id="time" required>
+                <option value="">Select time</option>
+                <option>09:00 AM</option>
+                <option>10:00 AM</option>
+                <option>11:00 AM</option>
+                <option>12:00 PM</option>
+                <option>01:00 PM</option>
+                <option>02:00 PM</option>
+                <option>03:00 PM</option>
+                <option>04:00 PM</option>
+                <option>05:00 PM</option>
+                <option>06:00 PM</option>
+                <option>07:00 PM</option>
+                <option>08:00 PM</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Area / Location *</label>
+              <input id="location" type="text" placeholder="Example: Alibag, Maharashtra" required>
+            </div>
+
+            <div class="field full">
+              <label>Describe Your Problem</label>
+              <textarea id="problem" placeholder="Tell us what happened to your phone..."></textarea>
+            </div>
+
+            <div class="field full">
+              <label>Upload Phone Photo</label>
+
+              <div class="photo-box">
+
+                <input id="photo" type="file"
+                       accept="image/*">
+
+                <img id="preview"
+                     class="photo-preview"
+                     alt="Phone preview">
+
+              </div>
+
+              <div class="form-note">
+                Photo is only previewed on this page. It is not automatically uploaded to a server.
+              </div>
+            </div>
+
+            <div class="field full">
+
+              <button type="submit"
+                      class="btn btn-gold"
+                      style="width:100%;">
+                CONFIRM & SEND TO WHATSAPP ↗
+              </button>
+
+            </div>
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+
   </div>
 
-  <form class="price-form" id="priceForm">
-   <h3 data-en="Request a Price Quote" data-hi="कीमत की जानकारी मांगें">Request a Price Quote</h3>
-   <p data-en="Complete the details; WhatsApp will open with your message." data-hi="जानकारी भरें; आपका मैसेज WhatsApp में खुलेगा।">Complete the details; WhatsApp will open with your message.</p>
-
-   <div class="field">
-    <label for="priceName" data-en="Your Name *" data-hi="आपका नाम *">Your Name *</label>
-    <input id="priceName" required placeholder="Enter your name">
-   </div>
-   <div class="field">
-    <label for="pricePhone" data-en="Your Contact Number *" data-hi="आपका फोन नंबर *">Your Contact Number *</label>
-    <input id="pricePhone" type="tel" inputmode="tel" required pattern="[0-9+() -]{7,20}" placeholder="Your phone number">
-   </div>
-   <div class="field">
-    <label for="priceBrand" data-en="Phone Brand *" data-hi="फोन का ब्रांड *">Phone Brand *</label>
-    <select id="priceBrand" required>
-     <option value="">Select brand / ब्रांड चुनें</option>
-     <option>Apple iPhone</option><option>Samsung</option><option>OnePlus</option>
-     <option>Xiaomi / Redmi</option><option>Realme</option><option>Vivo</option>
-     <option>Oppo</option><option>Motorola</option><option>Other</option>
-    </select>
-   </div>
-   <div class="field">
-    <label for="priceModel" data-en="Phone Model *" data-hi="फोन मॉडल *">Phone Model *</label>
-    <input id="priceModel" required placeholder="e.g. iPhone 14">
-   </div>
-   <div class="field">
-    <label for="priceService" data-en="Required Service *" data-hi="कौन सी सेवा चाहिए *">Required Service *</label>
-    <select id="priceService" required>
-     <option value="">Select service / सेवा चुनें</option>
-     <option>Display Replacement</option><option>Battery Replacement</option>
-     <option>Charging Issue</option><option>Camera Issue</option>
-     <option>Speaker / Mic Issue</option><option>Other Repair</option>
-    </select>
-   </div>
-   <div class="field">
-    <label for="priceArea" data-en="Area / Locality *" data-hi="इलाका *">Area / Locality *</label>
-    <input id="priceArea" required placeholder="e.g. Alibag">
-   </div>
-   <div class="field">
-    <label for="priceProblem" data-en="Describe the Problem" data-hi="समस्या बताएं">Describe the Problem</label>
-    <textarea id="priceProblem" placeholder="Describe your phone problem"></textarea>
-   </div>
-   <button class="btn" type="submit" data-en="REQUEST PRICE ON WHATSAPP ↗" data-hi="WHATSAPP पर कीमत पूछें ↗">REQUEST PRICE ON WHATSAPP ↗</button>
-  </form>
- </div>
 </section>
 
-<section class="area" id="area">
- <div class="container area-grid">
-  <div>
-   <div class="eyebrow" data-en="Service Area" data-hi="सेवा क्षेत्र">Service Area</div>
-   <h2 style="font:clamp(34px,5vw,48px)/1.15 'Playfair Display',serif;margin:13px 0" data-en="Mobile repair,<br><span class='gold'>at your doorstep.</span>" data-hi="मोबाइल रिपेयर,<br><span class='gold'>आपके दरवाज़े पर।</span>">Mobile repair,<br><span class="gold">at your doorstep.</span></h2>
-   <p style="color:var(--muted)" data-en="Currently accepting enquiries for Alibag and nearby areas. Confirm your exact location and appointment with us." data-hi="फिलहाल Alibag और आसपास के क्षेत्रों की पूछताछ स्वीकार की जाती है। अपना सही इलाका और अपॉइंटमेंट हमसे कन्फर्म करें।">Currently accepting enquiries for Alibag and nearby areas. Confirm your exact location and appointment with us.</p>
-   <div class="area-list">
-    <div class="area-pill">Alibag</div>
-    <div class="area-pill">Nagaon</div>
-    <div class="area-pill">Varsoli</div>
-    <div class="area-pill">Akshi</div>
-    <div class="area-pill">Chaul</div>
-    <div class="area-pill">Nearby areas</div>
-   </div>
-   <p class="area-note" data-en="Area list is indicative. Please confirm service availability before booking." data-hi="यह क्षेत्र सूची उदाहरण के लिए है। बुकिंग से पहले सेवा उपलब्धता की पुष्टि करें।">Area list is indicative. Please confirm service availability before booking.</p>
+
+<!-- PRICE GUIDE -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-head">
+      <div class="eyebrow">Price Guide</div>
+      <h2>Repair Enquiry</h2>
+      <p>Final pricing depends on model, part quality and repair condition.</p>
+    </div>
+
+    <div class="price-grid">
+
+      <div class="price-card">
+        <span>Display</span>
+        <strong>Ask Price</strong>
+        <small>Model dependent</small>
+      </div>
+
+      <div class="price-card">
+        <span>Battery</span>
+        <strong>Ask Price</strong>
+        <small>Model dependent</small>
+      </div>
+
+      <div class="price-card">
+        <span>Charging</span>
+        <strong>Ask Price</strong>
+        <small>Diagnosis required</small>
+      </div>
+
+      <div class="price-card">
+        <span>Other Repair</span>
+        <strong>Enquiry</strong>
+        <small>Contact us</small>
+      </div>
+
+    </div>
+
   </div>
-  <div class="map-card">
-   <div>
-    <div class="pin">⌖</div>
-    <h3>Alibag, Maharashtra</h3>
-    <p data-en="Doorstep service by appointment" data-hi="अपॉइंटमेंट से डोरस्टेप सेवा">Doorstep service by appointment</p>
-    <a class="btn outline" href="https://www.google.com/maps/search/?api=1&query=Alibag%2C%20Maharashtra" target="_blank" rel="noopener">OPEN MAP ↗</a>
-   </div>
-  </div>
- </div>
+
 </section>
+
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+  <div class="container">
+
+    <div class="section-head">
+      <div class="eyebrow">Repair Gallery</div>
+      <h2>Before & After</h2>
+      <p>Your actual repair photos can be added here.</p>
+    </div>
+
+    <div class="gallery">
+
+      <div class="gallery-item">
+        <div>
+          <strong>Display Replacement</strong>
+          <span>BEFORE → AFTER</span>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div>
+          <strong>Battery Replacement</strong>
+          <span>SERVICE COMPLETED</span>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div>
+          <strong>Charging Repair</strong>
+          <span>REPAIR STUDIO</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- REVIEWS -->
 
 <section id="reviews">
- <div class="container">
-  <div class="heading">
-   <div class="eyebrow" data-en="Customer Reviews" data-hi="ग्राहक रिव्यू">Customer Reviews</div>
-   <h2 data-en="Trust is built <span class='gold'>one repair at a time.</span>" data-hi="भरोसा बनता है <span class='gold'>हर रिपेयर के साथ।</span>">Trust is built <span class="gold">one repair at a time.</span></h2>
-   <p data-en="Add genuine feedback from customers after getting their permission." data-hi="ग्राहकों की अनुमति लेकर उनके असली रिव्यू यहां जोड़ें।">Add genuine feedback from customers after getting their permission.</p>
+
+  <div class="container">
+
+    <div class="section-head">
+      <div class="eyebrow">Customer Experience</div>
+      <h2>Customer Reviews</h2>
+      <p>Add genuine customer reviews after completed repairs.</p>
+    </div>
+
+    <div class="reviews">
+
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>
+          “Fast communication and convenient doorstep service.”
+        </p>
+        <strong>— Customer, Alibag</strong>
+      </div>
+
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>
+          “The booking process was simple and the repair details were explained clearly.”
+        </p>
+        <strong>— Customer, Alibag</strong>
+      </div>
+
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>
+          “Professional approach and easy WhatsApp communication.”
+        </p>
+        <strong>— Customer, Alibag</strong>
+      </div>
+
+    </div>
+
   </div>
-  <div class="reviews-grid">
-   <article class="review"><div class="stars">★★★★★</div><blockquote data-en="Add a real customer review here." data-hi="यहां असली ग्राहक का रिव्यू जोड़ें।">Add a real customer review here.</blockquote><b>Customer Name</b><small>Alibag</small></article>
-   <article class="review"><div class="stars">★★★★★</div><blockquote data-en="Replace this sample with genuine customer feedback." data-hi="इस सैंपल को असली ग्राहक की राय से बदलें।">Replace this sample with genuine customer feedback.</blockquote><b>Customer Name</b><small>Nearby area</small></article>
-   <article class="review"><div class="stars">★★★★★</div><blockquote data-en="Only publish reviews from real customers." data-hi="केवल असली ग्राहकों के रिव्यू प्रकाशित करें।">Only publish reviews from real customers.</blockquote><b>Customer Name</b><small>Alibag</small></article>
-  </div>
-  <p class="review-warning" data-en="These are placeholders, not actual testimonials. Replace them before publishing as customer reviews." data-hi="ये केवल सैंपल हैं, असली ग्राहक रिव्यू नहीं। प्रकाशित करने से पहले इन्हें बदलें।">These are placeholders, not actual testimonials. Replace them before publishing as customer reviews.</p>
- </div>
+
 </section>
 
-<section class="faq" id="faq">
- <div class="container">
-  <div class="heading">
-   <div class="eyebrow" data-en="Frequently Asked Questions" data-hi="अक्सर पूछे जाने वाले सवाल">Frequently Asked Questions</div>
-   <h2 data-en="Good to <span class='gold'>know.</span>" data-hi="जानना <span class='gold'>ज़रूरी है।</span>">Good to <span class="gold">know.</span></h2>
+
+<!-- WARRANTY -->
+
+<section>
+
+  <div class="container">
+
+    <div class="warranty">
+
+      <div class="eyebrow">Peace Of Mind</div>
+
+      <h2>Repair Warranty</h2>
+
+      <p>
+        Warranty depends on the repair and replacement part used.
+        Warranty terms, duration and exclusions are communicated before
+        the repair is confirmed.
+      </p>
+
+      <a class="btn btn-gold"
+         href="https://wa.me/917028561281?text=Hello%20Zainab%20Mobile%20Care%2C%20I%20want%20to%20know%20about%20repair%20warranty.">
+        ASK ABOUT WARRANTY
+      </a>
+
+    </div>
+
   </div>
-  <div class="faq-list">
-   <details><summary data-en="Do you provide doorstep repair?" data-hi="क्या आप घर पर रिपेयर करते हैं?">Do you provide doorstep repair?</summary><p data-en="Doorstep service is arranged by appointment. Contact us to confirm your location and the type of repair." data-hi="डोरस्टेप सेवा अपॉइंटमेंट से होती है। अपना इलाका और रिपेयर का प्रकार कन्फर्म करने के लिए संपर्क करें।">Doorstep service is arranged by appointment. Contact us to confirm your location and the type of repair.</p></details>
-   <details><summary data-en="Which phone brands do you support?" data-hi="कौन-कौन से फोन ब्रांड रिपेयर होते हैं?">Which phone brands do you support?</summary><p data-en="We accept enquiries for iPhone and Android devices. Availability depends on the model and fault." data-hi="iPhone और Android फोन की पूछताछ स्वीकार की जाती है। उपलब्धता मॉडल और खराबी पर निर्भर करती है।">We accept enquiries for iPhone and Android devices. Availability depends on the model and fault.</p></details>
-   <details><summary data-en="How much does a repair cost?" data-hi="रिपेयर का खर्च कितना होगा?">How much does a repair cost?</summary><p data-en="Price depends on your model, issue and part availability. Send a price enquiry for a quote before proceeding." data-hi="कीमत मॉडल, समस्या और पार्ट की उपलब्धता पर निर्भर करती है। आगे बढ़ने से पहले कीमत पूछें।">Price depends on your model, issue and part availability. Send a price enquiry for a quote before proceeding.</p></details>
-   <details><summary data-en="Does submitting the form confirm my booking?" data-hi="क्या फॉर्म भेजने से बुकिंग पक्की हो जाती है?">Does submitting the form confirm my booking?</summary><p data-en="No. The form opens WhatsApp with your enquiry. Your appointment is confirmed only after you coordinate with us." data-hi="नहीं। फॉर्म आपकी जानकारी WhatsApp में खोलता है। अपॉइंटमेंट हमसे बात करके ही कन्फर्म होगा।">No. The form opens WhatsApp with your enquiry. Your appointment is confirmed only after you coordinate with us.</p></details>
-   <details><summary data-en="Do you provide a repair warranty?" data-hi="क्या रिपेयर की वारंटी मिलती है?">Do you provide a repair warranty?</summary><p data-en="Warranty, if applicable, depends on the repair and parts used. Please confirm the terms before approving the repair." data-hi="यदि वारंटी लागू हो, तो वह रिपेयर और इस्तेमाल किए गए पार्ट पर निर्भर करेगी। रिपेयर मंज़ूर करने से पहले शर्तें पूछें।">Warranty, if applicable, depends on the repair and parts used. Please confirm the terms before approving the repair.</p></details>
-  </div>
- </div>
+
 </section>
-</main>
+
+
+<!-- FAQ -->
+
+<section id="faq">
+
+  <div class="container">
+
+    <div class="section-head">
+      <div class="eyebrow">Need Help?</div>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+
+    <div class="faq">
+
+      <details>
+        <summary>Do you provide doorstep repair in Alibag?</summary>
+        <p>
+          Yes. Doorstep service is available by appointment in selected
+          areas of Alibag.
+        </p>
+      </details>
+
+      <details>
+        <summary>How do I book a repair?</summary>
+        <p>
+          Fill the appointment form above. Your repair details will be
+          prepared and sent to WhatsApp for confirmation.
+        </p>
+      </details>
+
+      <details>
+        <summary>Can I ask for the price before repair?</summary>
+        <p>
+          Yes. Send your phone model and issue on WhatsApp for a price enquiry.
+          Final pricing can depend on diagnosis and part selection.
+        </p>
+      </details>
+
+      <details>
+        <summary>Do you repair iPhone and Android phones?</summary>
+        <p>
+          Yes. The service covers supported iPhone and Android devices.
+        </p>
+      </details>
+
+      <details>
+        <summary>Is warranty available?</summary>
+        <p>
+          Warranty depends on the repair and replacement component.
+          Warranty terms are discussed before confirmation.
+        </p>
+      </details>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
 
 <footer>
- <div class="container footer-row">
-  <div>
-   <a class="brand" href="#home"><div class="brand-mark">Z</div><div class="brand-name">ZAINAB MOBILE CARE<small>THE REPAIR STUDIO</small></div></a>
-   <p class="footer-copy">© <span id="year"></span> Zainab Mobile Care. All rights reserved.</p>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+        <h3>ZAINAB MOBILE CARE</h3>
+        <p>
+          THE REPAIR STUDIO<br>
+          Premium doorstep mobile repair service in Alibag.
+        </p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <p><a href="#services">Services</a></p>
+        <p><a href="#booking">Book Repair</a></p>
+        <p><a href="#gallery">Gallery</a></p>
+        <p><a href="#faq">FAQ</a></p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p>📍 Alibag, Maharashtra</p>
+        <p>📞 7028561281</p>
+        <p>📲 WhatsApp Available</p>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 Zainab Mobile Care — The Repair Studio. All Rights Reserved.
+    </div>
+
   </div>
-  <div class="footer-links">
-   <a href="#services">Services</a>
-   <a href="#faq">FAQ</a>
-   <a href="#pricing">Book Now</a>
-  </div>
- </div>
+
 </footer>
 
-<a class="float-wa" id="whatsappFloat" href="https://wa.me/917028561281" target="_blank" rel="noopener noreferrer"><span>☏</span>WhatsApp Us</a>
+
+<!-- WHATSAPP -->
+
+<a class="whatsapp"
+   href="https://wa.me/917028561281?text=Hello%20Zainab%20Mobile%20Care%2C%20I%20want%20to%20book%20a%20mobile%20repair."
+   aria-label="WhatsApp">
+  ☎
+</a>
+
+<div id="toast" class="toast">
+  Booking details prepared. Opening WhatsApp...
+</div>
+
 
 <script>
-"use strict";
 
-/* WhatsApp configuration */
-const WHATSAPP_NUMBER = "917028561281";
+/* ---------- DATE: PREVENT PAST DATES ---------- */
 
-function openWhatsApp(message){
-  const url = "https://wa.me/" + WHATSAPP_NUMBER +
-    "?text=" + encodeURIComponent(message);
-  window.location.href = url;
-}
+const dateInput = document.getElementById("date");
 
-/* Footer year */
-document.getElementById("year").textContent =
-  new Date().getFullYear();
+const today = new Date();
+const yyyy = today.getFullYear();
+const mm = String(today.getMonth()+1).padStart(2,"0");
+const dd = String(today.getDate()).padStart(2,"0");
 
-/* Mobile navigation */
-const menuToggle = document.getElementById("menuToggle");
-const navlinks = document.getElementById("navlinks");
+dateInput.min = `${yyyy}-${mm}-${dd}`;
 
-menuToggle.addEventListener("click", function(){
-  const opened = navlinks.classList.toggle("open");
-  menuToggle.setAttribute("aria-expanded", String(opened));
-  menuToggle.textContent = opened ? "✕ CLOSE" : "☰ MENU";
+
+/* ---------- PHOTO PREVIEW ---------- */
+
+const photoInput = document.getElementById("photo");
+const preview = document.getElementById("preview");
+
+photoInput.addEventListener("change", function(){
+
+  const file = this.files[0];
+
+  if(!file){
+    preview.style.display = "none";
+    return;
+  }
+
+  if(!file.type.startsWith("image/")){
+    alert("Please select an image file.");
+    this.value = "";
+    return;
+  }
+
+  const reader = new FileReader();
+
+  reader.onload = function(e){
+    preview.src = e.target.result;
+    preview.style.display = "block";
+  };
+
+  reader.readAsDataURL(file);
+
 });
 
-navlinks.querySelectorAll("a").forEach(function(link){
-  link.addEventListener("click", function(){
-    navlinks.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.textContent = "☰ MENU";
-  });
+
+/* ---------- WHATSAPP BOOKING ---------- */
+
+document.getElementById("bookingForm").addEventListener("submit", function(e){
+
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const mobile = document.getElementById("mobile").value.trim();
+  const brand = document.getElementById("brand").value;
+  const model = document.getElementById("model").value.trim();
+  const service = document.getElementById("service").value;
+  const date = document.getElementById("date").value;
+  const time = document.getElementById("time").value;
+  const location = document.getElementById("location").value.trim();
+  const problem = document.getElementById("problem").value.trim();
+
+  if(!/^[0-9]{10}$/.test(mobile)){
+    alert("Please enter a valid 10-digit mobile number.");
+    return;
+  }
+
+  const formattedDate = new Date(date + "T00:00:00")
+    .toLocaleDateString("en-IN",{
+      day:"2-digit",
+      month:"long",
+      year:"numeric"
+    });
+
+  let message =
+`*ZAINAB MOBILE CARE — REPAIR APPOINTMENT*
+
+Hello Faizan / Zainab Mobile Care,
+
+I want to book a doorstep mobile repair appointment.
+
+*CUSTOMER DETAILS*
+Name: ${name}
+Mobile: ${mobile}
+
+*DEVICE*
+Brand: ${brand}
+Model: ${model}
+
+*REPAIR*
+Service: ${service}
+Problem: ${problem || "Not specified"}
+
+*APPOINTMENT*
+Date: ${formattedDate}
+Time: ${time}
+Location: ${location}
+
+Please confirm the appointment and provide the estimated price.
+
+Thank you.
+— Booking from Zainab Mobile Care Website`;
+
+  const whatsappURL =
+    "https://wa.me/917028561281?text=" +
+    encodeURIComponent(message);
+
+  const toast = document.getElementById("toast");
+
+  toast.classList.add("show");
+
+  setTimeout(function(){
+
+    window.open(whatsappURL,"_blank");
+
+    toast.classList.remove("show");
+
+  },700);
+
 });
 
-/* Language toggle */
-let currentLanguage = "en";
-const langSwitch = document.getElementById("langSwitch");
 
-langSwitch.addEventListener("click", function(){
-  currentLanguage = currentLanguage === "en" ? "hi" : "en";
-  document.documentElement.lang = currentLanguage;
+/* ---------- SMOOTH NAVIGATION ---------- */
 
-  document.querySelectorAll("[data-en][data-hi]").forEach(function(el){
-    const content = el.getAttribute("data-" + currentLanguage);
-    if(content !== null) el.innerHTML = content;
-  });
+document.querySelectorAll('a[href^="#"]').forEach(function(link){
 
-  langSwitch.textContent = currentLanguage === "en" ? "हिन्दी" : "English";
-});
+  link.addEventListener("click",function(e){
 
-/* Floating WhatsApp */
-document.getElementById("whatsappFloat")
-.addEventListener("click", function(event){
-  event.preventDefault();
-  openWhatsApp("Hello Zainab Mobile Care! I would like to enquire about mobile repair.");
-});
+    const target = document.querySelector(this.getAttribute("href"));
 
-/* Service shortcuts */
-document.querySelectorAll("[data-service]").forEach(function(link){
-  link.addEventListener("click", function(){
-    const select = document.getElementById("priceService");
-    const wanted = link.getAttribute("data-service");
-    for(let i = 0; i < select.options.length; i++){
-      if(select.options[i].text === wanted){
-        select.value = wanted;
-        break;
-      }
+    if(target){
+
+      e.preventDefault();
+
+      target.scrollIntoView({
+        behavior:"smooth"
+      });
+
     }
+
   });
+
 });
 
-/* Price enquiry form */
-document.getElementById("priceForm")
-.addEventListener("submit", function(event){
-  event.preventDefault();
-
-  const name = document.getElementById("priceName").value.trim();
-  const phone = document.getElementById("pricePhone").value.trim();
-  const brand = document.getElementById("priceBrand").value;
-  const model = document.getElementById("priceModel").value.trim();
-  const service = document.getElementById("priceService").value;
-  const area = document.getElementById("priceArea").value.trim();
-  const problem = document.getElementById("priceProblem").value.trim() || "Not specified";
-
-  const message =
-    "Hello Zainab Mobile Care!\n" +
-    "I would like to request a repair price quote.\n\n" +
-    "Name: " + name + "\n" +
-    "Contact: " + phone + "\n" +
-    "Brand: " + brand + "\n" +
-    "Model: " + model + "\n" +
-    "Service: " + service + "\n" +
-    "Area: " + area + "\n" +
-    "problem: " + problem;
-
-  openWhatsApp(message);
-});
 </script>
 
 </body>
